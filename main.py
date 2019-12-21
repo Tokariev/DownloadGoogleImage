@@ -5,7 +5,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-import Scroll
 
 path = "https://www.google.com/maps/place/Bei+Oma+Kleinmann/@50.9295372,6.9384262,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1" \
        "QipO38CGk5WiJfhDbUjBwZbMclY4oS49V7oZ7dN2O!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO38CG" \
@@ -43,7 +42,7 @@ for i in range(1, 50):
         print(url)
 
     Actions.move_to_elem(driver, a)
-    Scroll.scroll_down(driver)
+    Actions.scroll_down(driver)
 
 driver.close()
 
